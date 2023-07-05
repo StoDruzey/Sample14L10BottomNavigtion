@@ -11,9 +11,11 @@ class PageFragment : Fragment() {
 
     private var _binding: FragmentPageBinding? = null
     private val binding get() = requireNotNull(_binding)
+    private var pageText = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        pageText = savedInstanceState?.getString(PAGE_KEY)
     }
 
     override fun onCreateView(
