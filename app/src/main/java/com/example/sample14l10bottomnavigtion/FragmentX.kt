@@ -16,6 +16,7 @@ class FragmentX : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         fragmentText = savedInstanceState?.getString(PAGE_KEY) ?: "Page: ${Random.nextInt(0, 20)}"
     }
 

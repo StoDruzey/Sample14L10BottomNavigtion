@@ -13,7 +13,6 @@ class PageFragment : Fragment() {
 
     private var _binding: FragmentPageBinding? = null
     private val binding get() = requireNotNull(_binding)
-//    private var pageText = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,9 +33,6 @@ class PageFragment : Fragment() {
                     .navController
             bottomNavigation.setupWithNavController(nestedController)
         }
-
-
-
     }
 
     override fun onDestroyView() {
