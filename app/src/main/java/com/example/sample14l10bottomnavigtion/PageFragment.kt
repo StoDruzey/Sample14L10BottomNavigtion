@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.sample14l10bottomnavigtion.databinding.FragmentPageBinding
 
 class PageFragment : Fragment() {
@@ -25,6 +27,15 @@ class PageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        with(binding) {
+            val nestedController =
+                (childFragmentManager.findFragmentById(R.id.fragment_page) as NavHostFragment)
+                    .navController
+            bottomNavigation.setupWithNavController(nestedController)
+        }
+
+
 
     }
 
