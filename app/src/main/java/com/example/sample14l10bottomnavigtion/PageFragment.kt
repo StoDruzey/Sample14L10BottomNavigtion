@@ -29,7 +29,7 @@ class PageFragment : Fragment() {
 
         with(binding) {
             val nestedController =
-                (childFragmentManager.findFragmentById(R.id.fragment_page) as NavHostFragment)
+                (childFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment)
                     .navController
             bottomNavigation.setupWithNavController(nestedController)
         }
